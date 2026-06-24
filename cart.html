@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart & Checkout | Wild Brew Coffee</title>
+  <meta name="description" content="Review your Wild Brew Coffee cart and send an order request for Mesa or Gilbert delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body data-page="cart">
+  <header class="site-header">
+    <a class="brand-link" href="index.html" aria-label="Wild Brew Coffee home">
+      <img class="brand-logo" src="assets/logos/wild-brew-coffee-logo.png" alt="Wild Brew Coffee logo">
+      <span class="brand-name">Wild Brew Coffee</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html" aria-current="page">Cart <span class="cart-count" data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">Order request</p>
+      <h1>Cart &amp; Checkout</h1>
+      <p>This checkout sends an order request. Wild Brew Coffee confirms availability, timing, and payment before preparing the order.</p>
+    </section>
+
+    <section class="section checkout-layout">
+      <div class="cart-panel">
+        <div class="panel-heading">
+          <h2>Your cart</h2>
+          <button class="text-button" type="button" data-clear-cart>Clear cart</button>
+        </div>
+        <div data-cart-items></div>
+        <div class="cart-total-row">
+          <span>Estimated total</span>
+          <strong data-cart-total>$0.00</strong>
+        </div>
+        <p class="fine-print">Delivery is free in Mesa and Gilbert. Final payment method and delivery time are confirmed manually.</p>
+      </div>
+
+      <form class="checkout-form" data-order-form>
+        <h2>Delivery details</h2>
+
+        <div class="form-grid">
+          <label>
+            Name
+            <input type="text" name="customerName" autocomplete="name" required>
+          </label>
+
+          <label>
+            Phone or Messenger name
+            <input type="text" name="contactMethod" autocomplete="tel" required>
+          </label>
+
+          <label>
+            Delivery city
+            <select name="deliveryCity" required>
+              <option value="">Choose one</option>
+              <option value="Mesa">Mesa</option>
+              <option value="Gilbert">Gilbert</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred delivery timing
+            <input type="text" name="deliveryTiming" placeholder="Example: Friday afternoon or confirm with me" required>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Payment preference</legend>
+          <label class="radio-row">
+            <input type="radio" name="paymentPreference" value="Zelle after confirmation" required>
+            Zelle after confirmation
+          </label>
+          <label class="radio-row">
+            <input type="radio" name="paymentPreference" value="Cash on delivery">
+            Cash on delivery
+          </label>
+          <label class="radio-row">
+            <input type="radio" name="paymentPreference" value="Tap / Apple Pay on delivery">
+            Tap / Apple Pay on delivery
+          </label>
+          <label class="radio-row">
+            <input type="radio" name="paymentPreference" value="Online card checkout if available">
+            Online card checkout if available
+          </label>
+        </fieldset>
+
+        <label>
+          Order notes
+          <textarea name="orderNotes" rows="5" placeholder="Add delivery notes, substitutions, or special requests."></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Create order request</button>
+          <a class="button button-secondary" href="menu.html">Add more drinks</a>
+        </div>
+
+        <div class="order-output" data-order-output hidden>
+          <h3>Order request ready</h3>
+          <p>Copy this summary and send it through Wild Brew Coffee's Facebook Messenger or Instagram DM.</p>
+          <textarea data-order-summary rows="12" readonly></textarea>
+          <div class="form-actions">
+            <button class="button button-primary" type="button" data-copy-order>Copy order summary</button>
+            <a class="button button-secondary" href="https://www.facebook.com/profile.php?id=61589585804811" target="_blank" rel="noopener">Open Facebook</a>
+            <a class="button button-secondary" href="https://www.instagram.com/wildbrewcoffe" target="_blank" rel="noopener">Open Instagram</a>
+            <a class="button button-ghost" href="success.html">Continue</a>
+          </div>
+        </div>
+
+        <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Wild Brew Coffee · Mesa &amp; Gilbert delivery</p>
+    <p>Order requests are manually confirmed before preparation.</p>
+  </footer>
+
+  <script src="js/logger.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/cart-store.js"></script>
+  <script src="js/cart-render.js"></script>
+  <script src="js/order-form.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

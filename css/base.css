@@ -1,0 +1,162 @@
+:root {
+  --color-black: #080504;
+  --color-deep-brown: #170d08;
+  --color-brown: #5b351f;
+  --color-caramel: #b8753b;
+  --color-tan: #e8c99f;
+  --color-cream: #fff2dd;
+  --color-muted: #c4aa88;
+  --color-border: rgba(232, 201, 159, 0.22);
+  --color-panel: rgba(27, 15, 10, 0.82);
+  --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.45);
+  --font-display: "Cinzel", Georgia, serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+  --max-width: 1180px;
+  --radius-large: 28px;
+  --radius-medium: 18px;
+  --radius-small: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-black);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(184, 117, 59, 0.2), transparent 32rem),
+    radial-gradient(circle at top right, rgba(232, 201, 159, 0.09), transparent 28rem),
+    linear-gradient(135deg, var(--color-black), var(--color-deep-brown) 62%, #050302);
+  color: var(--color-cream);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 242, 221, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 242, 221, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 6.8rem);
+  line-height: 0.9;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4.1rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.55rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  padding: 0.9rem 1rem;
+  background: rgba(8, 5, 4, 0.72);
+  color: var(--color-cream);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-tan);
+  outline-offset: 3px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--color-tan);
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

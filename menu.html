@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Wild Brew Coffee</title>
+  <meta name="description" content="Build a Wild Brew Coffee order with lattes, trays, flavors, cold foam, and add-ons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="menu">
+  <header class="site-header">
+    <a class="brand-link" href="index.html" aria-label="Wild Brew Coffee home">
+      <img class="brand-logo" src="assets/logos/wild-brew-coffee-logo.png" alt="Wild Brew Coffee logo">
+      <span class="brand-name">Wild Brew Coffee</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">Build your order</p>
+      <h1>Menu</h1>
+      <p>Choose individual lattes or trays, then customize flavors, cold foam, and add-ons.</p>
+    </section>
+
+    <section class="section menu-builder-section">
+      <div class="section-heading">
+        <p class="eyebrow">Lattes &amp; trays</p>
+        <h2>Select an item to add it to your cart.</h2>
+      </div>
+
+      <div class="product-grid" data-menu-products></div>
+    </section>
+
+    <section class="section options-section">
+      <div class="section-heading">
+        <p class="eyebrow">Flavor options</p>
+        <h2>Use these options when customizing each drink.</h2>
+      </div>
+
+      <div class="option-columns">
+        <article class="option-card">
+          <h3>Latte Flavors</h3>
+          <ul data-flavor-list></ul>
+        </article>
+
+        <article class="option-card">
+          <h3>Cold Foam</h3>
+          <ul data-cold-foam-list></ul>
+        </article>
+
+        <article class="option-card">
+          <h3>Add-ons</h3>
+          <ul data-addon-list></ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Wild Brew Coffee · Mesa &amp; Gilbert delivery</p>
+    <p>Order requests are manually confirmed before preparation.</p>
+  </footer>
+
+  <script src="js/logger.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/cart-store.js"></script>
+  <script src="js/cart-render.js"></script>
+  <script src="js/order-form.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

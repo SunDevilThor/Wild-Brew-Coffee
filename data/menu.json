@@ -1,0 +1,79 @@
+{
+  "products": [
+    {
+      "id": "small-latte",
+      "name": "Small Iced Latte",
+      "price": 6.5,
+      "drinkCount": 1
+    },
+    {
+      "id": "large-latte",
+      "name": "Large Iced Latte",
+      "price": 7.5,
+      "drinkCount": 1
+    },
+    {
+      "id": "small-tray",
+      "name": "Small Tray",
+      "price": 20,
+      "drinkCount": 4
+    },
+    {
+      "id": "large-tray",
+      "name": "Large Tray",
+      "price": 25,
+      "drinkCount": 4
+    }
+  ],
+  "flavors": [
+    "Mocha",
+    "Vanilla",
+    "Caramel",
+    "S'mores",
+    "Pistachio",
+    "Coconut",
+    "Tiramisu",
+    "White Chocolate"
+  ],
+  "coldFoamFlavors": [
+    "Salted Vanilla",
+    "Chocolate",
+    "White Chocolate",
+    "Caramel"
+  ],
+  "addOns": [
+    {
+      "id": "extra-shot",
+      "name": "Extra Shot",
+      "price": 1.5
+    },
+    {
+      "id": "extra-cold-foam",
+      "name": "Extra Cold Foam",
+      "price": 1
+    },
+    {
+      "id": "extra-syrup",
+      "name": "Extra Syrup",
+      "price": 0.5
+    },
+    {
+      "id": "extra-topping",
+      "name": "Extra Topping",
+      "price": 0.5
+    }
+  ],
+  "delivery": {
+    "freeCities": [
+      "Mesa",
+      "Gilbert"
+    ],
+    "note": "Order requests are manually confirmed before preparation."
+  },
+  "paymentPreferences": [
+    "Zelle after confirmation",
+    "Cash on delivery",
+    "Tap / Apple Pay on delivery",
+    "Online card checkout if available"
+  ]
+}

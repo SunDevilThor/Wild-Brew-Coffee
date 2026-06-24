@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Brew Coffee | Local Iced Coffee Delivery</title>
+  <meta name="description" content="Wild Brew Coffee delivers handcrafted iced lattes and coffee trays in Mesa and Gilbert.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand-link" href="index.html" aria-label="Wild Brew Coffee home">
+      <img class="brand-logo" src="assets/logos/wild-brew-coffee-logo.png" alt="Wild Brew Coffee logo">
+      <span class="brand-name">Wild Brew Coffee</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Free delivery in Mesa &amp; Gilbert</p>
+        <h1>Wild iced coffee, brewed local and delivered fresh.</h1>
+        <p class="hero-text">Build your latte, customize a four-drink tray, and send an order request directly from the site.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="menu.html">View Menu</a>
+          <a class="button button-secondary" href="cart.html">Start Order</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="assets/images/wild-brew-coffee-tray-offer-menu.jpeg" alt="Wild Brew Coffee tray offer menu with iced coffee drinks">
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Simple ordering without forcing online payment.</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="info-card">
+          <span class="step-number">01</span>
+          <h3>Choose your drinks</h3>
+          <p>Select individual lattes or build a tray with four customized iced coffees.</p>
+        </article>
+        <article class="info-card">
+          <span class="step-number">02</span>
+          <h3>Send an order request</h3>
+          <p>Add delivery details and send the order summary for manual confirmation.</p>
+        </article>
+        <article class="info-card">
+          <span class="step-number">03</span>
+          <h3>Pay your way</h3>
+          <p>Choose Zelle, cash, tap, or online payment preference if the owner enables it later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="feature-image">
+        <img src="assets/images/wild-brew-coffee-many-trays.jpeg" alt="Multiple Wild Brew Coffee trays with iced drinks">
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">Tray orders</p>
+        <h2>Four drinks, each customized.</h2>
+        <p>Small and large trays are built for sharing, gifting, events, and caffeine runs. Each drink can be customized with flavors, cold foam, extra shots, syrup, and toppings.</p>
+        <a class="text-link" href="menu.html">Build a tray</a>
+      </div>
+    </section>
+
+    <section class="section menu-preview-section">
+      <div class="section-heading">
+        <p class="eyebrow">Menu highlights</p>
+        <h2>Bold flavors with warm desert-coffee energy.</h2>
+      </div>
+
+      <div class="menu-preview-grid">
+        <article class="menu-preview-card">
+          <img src="assets/images/coffee-cup-1.jpeg" alt="Wild Brew iced coffee cup">
+          <h3>Individual Lattes</h3>
+          <p>Small $6.50 · Large $7.50</p>
+        </article>
+        <article class="menu-preview-card">
+          <img src="assets/images/wild-brew-coffee-1-tray.jpeg" alt="Wild Brew coffee tray">
+          <h3>Coffee Trays</h3>
+          <p>Small tray $20 · Large tray $25</p>
+        </article>
+        <article class="menu-preview-card">
+          <img src="assets/images/wild-brew-flower-tray.jpeg" alt="Wild Brew floral tray presentation">
+          <h3>Custom Add-ons</h3>
+          <p>Extra shots, foam, syrup, and toppings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section callout-section">
+      <p class="eyebrow">Ready to order?</p>
+      <h2>Build your coffee order and send it for confirmation.</h2>
+      <a class="button button-primary" href="menu.html">Start with the menu</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Wild Brew Coffee · Mesa &amp; Gilbert delivery</p>
+    <p>Order requests are manually confirmed before preparation.</p>
+  </footer>
+
+  <script src="js/logger.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/cart-store.js"></script>
+  <script src="js/cart-render.js"></script>
+  <script src="js/order-form.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
