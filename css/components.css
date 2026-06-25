@@ -92,7 +92,7 @@
 
 .hero-card {
   padding: 0.75rem;
-  transform: rotate(1.5deg);
+  transform: none;
 }
 
 .hero-card img,

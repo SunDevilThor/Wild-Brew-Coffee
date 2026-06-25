@@ -86,7 +86,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 7vw, 6.8rem);
+  font-size: clamp(2.4rem, 5.8vw, 5.6rem);
   line-height: 0.9;
   margin-bottom: 1.25rem;
 }
