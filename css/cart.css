@@ -87,6 +87,13 @@
   font-weight: 700;
 }
 
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: rgba(255, 242, 221, 0.58);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .order-output {
   display: grid;
   gap: 1rem;
